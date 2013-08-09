@@ -28,6 +28,7 @@ static adcsample_t samples2[ADC_GRP2_NUM_CHANNELS * ADC_GRP2_BUF_DEPTH];
  * ADC streaming callback.
  */
 float pc0 = 0;
+float pc1 = 0;
 float pc0_volt = 0;
 float pc1_volt = 0;
 float pc0_temp = 0;
@@ -43,7 +44,9 @@ static void adccallback(ADCDriver *adcp, adcsample_t *buffer, size_t n) {
     }
 
     pc0 = (float) samples2[0];
+    pc1 = (float) samples2[1];
     pc0_volt = (pc0 / 4095) * 3.3;
+    pc1_volt = (pc1 / 4095) * 3.3;
     pc0_temp = pc0_volt * 100;
 }
 
