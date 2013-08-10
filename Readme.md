@@ -1,5 +1,5 @@
-STM32F0-Discovery-example-code
-==============================
+Chibios-STM32F051-DISCOVERY-adc-shell-example code
+==================================================
 
 This is my example code for the STM32F0 Discovers using the RTOS ChibiOS.
 
